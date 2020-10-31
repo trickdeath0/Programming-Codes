@@ -1,0 +1,15 @@
+import os
+
+def change_working_direcroty_to(path):
+    retval = os.getcwd()
+    #print(retval)
+    os.chdir(path)
+    print ("[+] Changing working directory to " + os.getcwd())
+
+command = input(">> ")
+command = command.split(" ")
+
+if command[0] == "cd" and len(command) > 1:
+    command_result = change_working_direcroty_to(command[1])
+retval = os.getcwd()
+#print(retval)
