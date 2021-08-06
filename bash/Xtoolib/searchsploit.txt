@@ -1,0 +1,14 @@
+vsftpd
+OpenSSH
+smtpd
+BIND
+Apache httpd
+Samba smbd
+ProFTPD
+MySQL
+PostgreSQL
+UnrealIRCd
+pache Jserv
+Apache Tomcat
+Node.js
+Ruby
