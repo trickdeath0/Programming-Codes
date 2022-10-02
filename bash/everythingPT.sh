@@ -211,6 +211,14 @@ SE(){
 	sudo apt install httrack
 	echo "[+] httrack complete"
 	
+	mkdir -p DeepWeb && cd DeepWeb
+	echo "[+] Darkdump"
+	git clone https://github.com/josh0xA/darkdump
+	cd darkdump
+	python3 -m pip install -r requirements.txt
+	cd ../..
+	echo "[+] Darkdump complete"
+	
 }
 
 AD(){
