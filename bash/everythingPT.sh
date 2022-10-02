@@ -257,7 +257,16 @@ RE(){
 
 }
 
+Malware(){
+	echo "[+] Start download Malware Tools..."
+	mkdir -p Malware && cd Malware
+	echo "[+] malwoverview"
+	pip3.9 install git+https://github.com/alexandreborges/malwoverview
+	python -m pip install -U malwoverview
+	echo "[+] malwoverview complete"
+	cd ..
 
+}
 
 
 Logo(){
